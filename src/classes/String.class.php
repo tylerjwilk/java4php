@@ -121,6 +121,12 @@
         {
             return trim($this->str);
         }
+        
+        // return a string version of this String object
+        function __toString()
+        {
+            return $this->str;
+        }
 
     }
 
