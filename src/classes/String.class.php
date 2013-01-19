@@ -12,7 +12,7 @@
     // TODO : test if work
     // TODO : proper documentation
 
-    class String extends Base
+    class String
     {
         // store the string
         var $str;
