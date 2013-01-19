@@ -6,7 +6,7 @@
 
 // TODO FIXME - Add better tests with PHPUnit
 
-// String class
+// dependancies
 require('../src/classes/String.class.php');
 require('classes/Test.class.php');
 
