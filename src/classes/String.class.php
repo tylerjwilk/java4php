@@ -9,7 +9,6 @@
 
     // TODO : write code
     // TODO : write tests
-    // TODO : test if work
     // TODO : proper documentation
 
     class String
@@ -60,7 +59,9 @@
         // Returns the index within this string of the first occurrence of the specified substring.
         function indexOf(string $str, int $fromIndex)
         {
-            // TODO
+            if (!$fromIndex) $fromIndex = 0;
+            $pos = strpos($this->str, $str, $fromIndex);
+            return $pos;
         }
 
         // Returns true if, and only if, length() is 0.
@@ -70,9 +71,11 @@
         }
 
         // Returns the index within this string of the last occurrence of the specified substring, searching backward starting at the specified index.
-        function lastIndexOf(string $string, int $fromIndex)
+        function lastIndexOf(string $str, int $fromIndex)
         {
-            // TODO
+            if (!$fromIndex) $fromIndex = 0;
+            $pos = strrpos($this->str, $str, $fromIndex);
+            return $pos;
         }
 
         // Returns the length of this string.
@@ -96,7 +99,10 @@
         // Tests if this string starts with the specified prefix
         function startsWith(string $prefix)
         {
-            // TODO
+            if (!$prefix) return false;
+            $prefix_len = (strlen($prefix));
+            if (substr($this->str, 0, $prefix_len) == $prefix) return true;
+            return false;
         }
 
         // Returns a new string that is a substring of this string.
