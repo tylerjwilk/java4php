@@ -39,7 +39,10 @@
         // Tests if this string ends with the specified suffix.
         function endsWith(string $suffix)
         {
-            // TODO
+            if (!$suffix) return false;
+            $suffix_len = (strlen($suffix) * -1);
+            if (substr($this->str,$suffix_len) == $suffix) return true;
+            return false;
         }
 
         // Compares this string to the specified string
